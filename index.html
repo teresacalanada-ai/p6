@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floristería Pétalos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    :root{
+        --fondo-tarjeta: #5f5c5d;
+        --amarillo: #ffd45f;
+        --texto: #ffffff;
+    }
+
+    body{
+        min-height: 100vh;
+        padding: 2rem;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .tarjeta{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0.6rem;
+        width: 100%;
+        max-width: 36rem;
+        padding: 0.9rem;
+        background: var(--fondo-tarjeta);
+        color: var(--texto);
+        border-radius: 2rem;
+    }
+
+    .imagen{
+        flex: 0 0 52%;
+        min-width: 0;
+        height: 15rem;         
+        object-fit: cover;     
+        border-radius: 1.75rem;
+        background: #8d8a8b;
+        display: block;
+    }
+
+    .tarjeta__info{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.6rem;
+    }
+
+    .tarjeta__contenido{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tarjeta__titulo{
+        font-size: 1.1rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .tarjeta__texto{
+        font-size: 0.72rem;
+        line-height: 1.4;
+    }
+
+    .abrir{
+        display: block;
+        width: 100%;
+        padding: 0.35rem 1rem;
+        background: var(--amarillo);
+        color: var(--texto);
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-align: center;
+        border-radius: 999px;
+        transition: filter 0.2s ease;
+    }
+
+    @media (max-width:400px){
+        .tarjeta {
+            flex-direction: column;
+        }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <article class="tarjeta">
+    <img class="imagen" src="imgmargaritas.jpg" alt="Margaritas blancas">
+    <div class="tarjeta__info">
+      <div class="tarjeta__contenido">
+        <h2 class="tarjeta__titulo">Floristería Pétalos</h2>
+        <p class="tarjeta__texto">Compra y encarga flores o plantas a domicilio o para recoger.</p>
+      </div>
+      <a class="abrir">Abrir</a>
+    </div>
+  </article>
+
+</body>
+</html>
